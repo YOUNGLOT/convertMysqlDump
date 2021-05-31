@@ -1,0 +1,12 @@
+MySQL Export 할 경우
+
+Table Name & Column Name 을 대문자로 치환하는 Java 입니다.
+
+MySQL Dump 파일 특징 
+1.Table Name & Column Name 은 `로 감싼다 ex) `name`
+2.Table Name & Column Name 은 한 row 에 출력한다.
+
+로직
+1. 해당 파일의 Line 을 String 으로 가져옴
+2. ` 의 인덱스를 List 에 add
+3. ` 의 2n 인덱스 사이에 있는 String 을 UpperCase 로 치환
