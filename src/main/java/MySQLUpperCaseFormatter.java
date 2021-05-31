@@ -4,20 +4,19 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class IU {
+public class MySQLUpperCaseFormatter {
     public static void main(String[] args) {
-        IU iu = new IU();
-//        iu.solve("MYSQL_Hydrak_Table_Only.sql");
+        MySQLUpperCaseFormatter mySQLUpperCaseFormatter = new MySQLUpperCaseFormatter();
 
         String folderDirectory = "MYSQL_Hydrak_Data_All/";
-        String[] fileNameArray = iu.getfileNames("./data/"+folderDirectory);
+        String[] fileNameArray = mySQLUpperCaseFormatter.getfileNames("./data/"+folderDirectory);
         for (int i = 0; i < fileNameArray.length; i++) {
 
             System.out.println(String.format(" 시작합니당 : %s 파일 시작!", fileNameArray[i]));
 
             String fileDirectory = String.format("%s/%s", folderDirectory, fileNameArray[i]);
 
-            iu.solve(fileDirectory);
+            mySQLUpperCaseFormatter.solve(fileDirectory);
 
         }
 
